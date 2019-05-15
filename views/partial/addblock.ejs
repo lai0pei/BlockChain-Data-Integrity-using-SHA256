@@ -1,0 +1,130 @@
+<div class="row" id="addblock">
+
+  <div class="offset-md-4">
+    <div class="offset-md-2">
+      <h3>Create New Block</h3>
+    </div>
+    <form name="form" ng-submit="create(Name,Gender,DateOfBirth,Ssn,Charge,OffenseDate,caseNo,DisposedDate)" novalidate
+      class="form-horizontal">
+
+      <div class="row">
+
+        <div class="form-group col-md-6">
+          <label class="control-label" for="caseNo">Case No</label>
+          <input type="number" class="form-control" ng-model="caseNo" required placeholder="CaseNo(eg.5678)"
+            ng-minlength="4" min="0" ng-maxlength="4" name="caseNo">
+          <div ng-show="form.caseNo.$touched">
+            <div ng-show="form.caseNo.$error.maxlength" class="alert alert-danger">
+              Case No must be 4 digits!
+            </div>
+            <div ng-show="form.caseNo.$error.minlength" class="alert alert-danger">
+              Case No must be 4 digits!
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label" for="Charge">Charge</label>
+          <input type="text" class="form-control" ng-model="Charge" placeholder="eg.Carrying Weapons" required name="Charge">
+          <div ng-show="form.Charge.$touched">
+            <div ng-show="form.Charge.$error.$invalid" class="alert alert-danger">
+              Enter the reason of charge!
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row">
+
+        <div class="form-group col-md-6">
+          <label class="control-label" for="Name">Name</label>
+          <input type="text" class="form-control" placeholder="Eg.Robert Williams" name="Name" required ng-model="Name">
+          <div ng-show="form.Name.$touched">
+            <div ng-show="form.Name.$error.$invalid" class="alert alert-danger">
+              Fill the name!
+            </div>
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <label class="control-label" for="gender">Gender</label>
+          <select class="form-control" ng-model="Gender" required name="Gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+          <div ng-show="form.Gender.$touched">
+            <div ng-show="form.Gender.$error.$invalid" class="alert alert-danger">
+              Select the Gender!
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="form-group">
+        <label class="control-label" for="Ssn">Social Security Number</label>
+        <input type="number" class="form-control" placeholder="Social Security Number(eg.456789487)" ng-model="Ssn" min="0"
+          ng-maxlength="9" ng-minlength="9" required name="Ssn">
+        <div ng-show="form.Ssn.$touched">
+          <div ng-show="form.Ssn.$error.maxlength" class="alert alert-danger">
+            SSN must be 9 digits!
+          </div>
+          <div ng-show="form.Ssn.$error.minlength" class="alert alert-danger">
+            SSN must be 9 digits!
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label" for="DateOfBirth">Date Of Birth</label>
+        <input type="text" class="form-control" placeholder="Enter the Date " ng-model="DateOfBirth" required name="DateOfBirth"
+          onfocus="(this.type='Date')" onblur="if(this.value==''){this.type='text'}">
+        <div ng-show="form.DateOfBirth.$touched">
+          <div ng-show="form.DateOfBirth.$error.$invalid" class="alert alert-danger">
+            Data of Birth must be entered!
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="form-group col-md-6">
+          <label class="control-label" for="OffenseDate">Offense Date</label>
+          <input type="text" placeholder="Enter the offense date" class="form-control" required ng-model="OffenseDate"
+            name="OffenseDate" onfocus="(this.type='Date')" onblur="if(this.value==''){this.type='text'}">
+          <div ng-show="form.OffenseDate.$touched">
+            <div ng-show="form.OffenseDate.$error.$invalid" class="alert alert-danger">
+              Enter the Date!
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label" for="DisposedDate">Disposed Date</label>
+          <input type="text" placeholder="Choose a Date" class="form-control" ng-model="DisposedDate" required onfocus="(this.type='Date')"
+            onblur="if(this.value==''){this.type='text'}" class="form-control" name="DisposedDate">
+          <div ng-show="form.DisposedDate.$touched">
+            <div ng-show="form.DisposedDate.$error.$invalid" class="alert alert-danger">
+              Enter the Date!
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div>
+        <button type="submit" id="btn1" class="btn btn-lg offset-md-2" data-toggle="modal" data-target="#create" ng-disabled="form.$invalid">Create</button>
+        <button type="reset" class="btn btn-default btn-lg offset-md-2" data-toggle="modal" data-target="#cancel" ng-click="clear()">Cancel</button>
+      </div>
+
+
+
+    </form>
+
+
+  </div>
+</div>

@@ -1,0 +1,324 @@
+html {
+  width: 100%;
+  height: 100%;
+  zoom : 80%;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  font-family: "google sans";
+  margin: 0;
+}
+
+#btngroup{
+  padding-bottom : 100px;
+}
+
+#btn1:disabled {
+  background-color: rgb(117, 0, 0);
+  color: white;
+}
+
+#btn1:enabled {
+  background-color: #42a948;
+  color: white;
+}
+
+#btn1:disabled:hover + #hov {
+  display: block;
+}
+
+#hov {
+  color: white;
+  background-color: rgb(117, 0, 0);
+  padding: 20px;
+  display: none;
+}
+
+
+h1 {
+  position: absolute;
+  font: bold;
+  padding-top: 200px;
+  padding-left: 27%;
+  pointer-events: none;
+  color: white;
+  font-size: 50px;
+  font-family: "google sans";
+}
+
+
+h2 {
+  color: white;
+}
+
+h3 {
+  color: whitesmoke;
+  font-size: 35px;
+  padding-bottom: 30px;
+}
+
+#data {
+  padding-bottom: 20px;
+}
+
+.card {
+  display: block;
+  border-radius: 5px;
+  padding-top: 50px;
+  background-color: #383838;
+  opacity : 0.9;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.card:hover {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.25),
+    10px 10px 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.correct {
+  background-color: rgb(20, 75, 1);
+}
+
+.error {
+  background-color: rgb(78, 1, 1);
+}
+
+#navb {
+  margin-bottom: 0;
+  background-color: black;
+  border: 0;
+  font-size: 15px !important;
+  letter-spacing: 4;
+  opacity: 0.8;
+}
+
+.navbar li a,
+.navbar .navbar-brand {
+  color: #ffffff !important;
+}
+
+.navbar-nav li.active a {
+  color: #ffffff !important;
+  background-color: #29292c !important;
+}
+
+.navbar-default {
+  border-color: transparent;
+}
+
+#createNewBlock {
+  position: absolute;
+  opacity : 0.8;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  opacity: 0.9;
+  margin: 0;
+}
+
+#reteriveBlock {
+  padding-top: 100px;
+  height : 100%;
+  position: absolute;
+  opacity: 0.9;
+  margin: 0;
+}
+
+h4 {
+  color: rgb(255, 255, 255);
+  font-style: bold;
+}
+
+#col:hover {
+  color: white !important;
+}
+
+#deny{
+  background: rgb(80, 5, 5);
+  opacity : 0.9;
+}
+
+
+#grant{
+  background: rgb(12, 77, 6);
+  opacity : 0.9;
+}
+
+#hzn {
+  padding-bottom: 50px;
+  padding-right: 150px;
+}
+
+#h3 {
+  padding-bottom: 30px;
+}
+
+.modal-open {
+  overflow: scroll;
+}
+
+.modal {
+  color: rgb(117, 0, 0);
+  opacity: 1;
+}
+
+#modal {
+  background: rgb(117, 0, 0);
+  color: white;
+}
+
+form input.ng-valid {
+  border-left: 5px solid #42a948;
+}
+
+form input.ng-invalid {
+  border-left: 5px solid rgb(117, 0, 0);
+}
+
+label {
+  color: white;
+}
+
+#cs {
+  width: 100%;
+  height: 200%;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-color: black;
+  opacity: 0.9;
+  background-repeat: no-repeat;
+  position: relative;
+  margin: 0;
+  border-radius: 0px;
+ 
+}
+
+ #new {
+  position: relative;
+  pointer-events: all;
+  background-color: black;
+  opacity: 0.9;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border-radius: 0;
+ 
+} 
+
+#old {
+  position : relative;
+  pointer-events: all;
+  height: 1500px;
+  background-color : black;
+  opacity : 0.9;
+}
+
+#refreshing{
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#sync{
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#checking{
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#insert{
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#checking.show{
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+#refreshing.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+#sync.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+#insert.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}

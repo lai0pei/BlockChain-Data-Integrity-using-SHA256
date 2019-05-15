@@ -1,0 +1,177 @@
+<div class="row offset-md-5" id="h3">
+    <h3 id="data">Data in the Blockchain</h3>    
+</div>
+<div class="btn-group btn-group-lg offset-md-4" id="btngroup" role="group">
+<button class="btn btn-success ld-ext-right" id="refresh" ng-click="refresh()">Refresh<div class="ld ld-ring ld-spin"></div></button>
+<button class="btn btn-primary ld-ext-right" id="check" ng-click="checkState(2,blockchain.chain.length)">Integrity Check<div class="ld ld-ring ld-spin"></div></button>
+<button class="btn btn-secondary ld-ext-right" id="consensus" ng-click="consensus()">Sync the  chain<div class="ld ld-ring ld-spin"></div></button>
+<button class="btn btn-danger ld-ext-right" id="push" ng-click="pushNewData(blockchain.chain.length)">Replace Modified Blockchain<div class="ld ld-ring ld-spin"></div></button>
+
+
+</div>
+
+<div class="row-horizon" id="hzn">
+   
+    <div class="card col-md-7 offset-md-1 ld-over" ng-repeat="block in blockchain.chain" id="block{{block.Index}}">
+        
+        <div class="row">
+            <div class="offset-md-5">
+                <h2 ng-model="block.Index">BLOCK {{block.Index}}</h2>
+            </div>
+        </div>
+        <div class="card-body">
+
+            <div class="row offset-md-1"><a href="#userData" data-toggle="collapse" id="col">
+                    <h4>User Data</h4>
+                </a></div>
+
+            <div class="row collapse show offset-md-1" id="userData">
+
+                <div class="row">
+
+
+                    <div class="form-group col-md-5">
+                        <label class="control-label">CaseNo:</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="caseNo{{block.Index}}"  ng-change="updateChain(block.Index,blockchain.chain.length)"
+                                ng-model="block.CaseNo">
+                        </div>
+                    </div>
+
+                    <div class="form-group col-md-5 ">
+                        <label class="control-label">Name:</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="name{{block.Index}}"  ng-change="updateChain(block.Index,blockchain.chain.length)"
+                                ng-model="block.Name">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="form-group col-md-5">
+                        <label class="control-label">Gender:</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="gender{{block.Index}}"  ng-change="updateChain(block.Index,blockchain.chain.length)"
+                                ng-model="block.Gender">
+                        </div>
+                    </div>
+
+
+
+                    <div class="form-group col-md-5">
+                        <label class="control-label">Date Of Birth:</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="dateofbirth{{block.Index}}" ng-change="updateChain(block.Index,blockchain.chain.length)"
+                                ng-model="block.DateOfBirth">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="form-group col-md-5">
+                        <label class="control-label">SSN:</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="ssn{{block.Index}}"  ng-change="updateChain(block.Index,blockchain.chain.length)"
+                                ng-model="block.SSN">
+                        </div>
+                    </div>
+
+                    <div class="form-group col-md-5">
+                        <label class="control-label">Charge:</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="charge{{block.Index}}"  ng-change="updateChain(block.Index,blockchain.chain.length)"
+                                ng-model="block.Charge">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="form-group col-md-5">
+                        <label class="control-label">Offense Date:</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="offensedate{{block.Index}}"  ng-change="updateChain(block.Index,blockchain.chain.length)"
+                                ng-model="block.OffenseDate">
+                        </div>
+                    </div>
+
+
+                    <div class="form-group col-md-5">
+                        <label class="control-label">Disposed Date:</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="disposeddate{{block.Index}}"  ng-change="updateChain(block.Index,blockchain.chain.length)"
+                                ng-model="block.DisposedDate">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row offset-md-1"><a href="#blockData" data-toggle="collapse" id="col">
+                    <h4>Block Header</h4>
+                </a></div>
+
+            <div class="row collapse show offset-md-1" id="blockData">
+
+                <div class="row">
+                    <div class="form-group col-md-10">
+                        <label class="control-label">Nonce:</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="nonce{{block.Index}}" ng-change="updateChain(block.Index,blockchain.chain.length)"
+                                ng-model="block.Nonce">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-md-10">
+                        <label class="control-label">Index:</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="index{{block.Index}}" disabled ng-model="block.Index">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="form-group col-md-10">
+                        <label class="control-label">Current Block Hash:</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="cur{{block.Index}}"  ng-change="updateChain(block.Index,blockchain.chain.length)"
+                                ng-model="block.CurrentBlockHash">
+                        </div>
+                    </div>
+                    <div class="form-group col-md-10">
+                        <label class="control-label">Previous Block Hash:</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="pre{{block.Index}}" ng-change="updateChain(block.Index,blockchain.chain.length)"
+                                ng-model="block.PreviousBlockHash">
+                        </div>
+                    </div>
+
+                    <div class="form-group col-md-10">
+                        <label class="control-label">Current Node IP:</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="network{{block.Index}}" disabled
+                                ng-model="blockchain.CurrentNetworkNode">
+                        </div>
+                    </div>
+               
+                </div>
+                <div class="row">
+                        <div class="input-group offset-md-2">
+                        <button class="btn btn-danger ld-ext-right" id="ldbtn{{block.Index}}" ng-click="getNonce(block.Index,blockchain.chain.length)">Proof Of Work<div class="ld ld-ring ld-spin-fast"></div></button>
+                        </div>
+               </div>
+            </div>
+          
+        </div>
+        
+    </div>
+    
+</div>

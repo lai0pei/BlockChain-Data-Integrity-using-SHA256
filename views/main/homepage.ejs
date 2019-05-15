@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ../partial/head %>
+
+<body data-spy="scroll" data-target="#navb" data-offset="50" ng-app="blockData">
+
+        
+        <% include ../partial/ui %>
+        <% include ../partial/dialog %>
+        <div class="jumbotron text-center" id="cs">
+                <h1>Data Integrity On Blockchain</h1>
+        </div>
+        <div id="new">
+                <div id="createNewBlock" class="container-fluid" ng-controller="addblock">
+
+                        <% include ../partial/addblock %>
+                </div>
+        </div>
+
+        <div id="old">
+                <div id="reteriveBlock" class="container-fluid" ng-controller="showblock">
+
+                        <% include ../block/blockchain %>
+                </div>
+        </div>
+
+
+        <script src="/javascripts/angular_function.js"></script>
+        <script src="/javascripts/Hash.js"></script>
+        <script src="/javascripts/Blockchain_function.js"></script>
+        <script src="/javascripts/animation.js"></script>
+
+</body>
+
+</html>

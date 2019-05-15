@@ -1,0 +1,20 @@
+{
+  "name": "bootstrap-horizon",
+  "version": "1.0.0",
+  "homepage": "https://github.com/Zertz/bootstrap-horizon",
+  "authors": [
+    "Pier-Luc Gendreau <pierluc@outlook.com>"
+  ],
+  "description": "Boostrap 3 rows with inline, horizontally scrolling columns",
+  "main": "bootstrap-horizon.css",
+  "keywords": [
+    "bootstrap",
+    "horizontal",
+    "scroll",
+    "row"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "screenshots"
+  ]
+}
