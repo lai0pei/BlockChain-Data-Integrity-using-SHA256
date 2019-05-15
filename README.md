@@ -4,7 +4,7 @@ This project is to help user understand how integrity is working in blockchain.
 Blockchian is a new trend technology that is used in Bitcoin, the famous cryptocurrency. 
 The amazing thing about bitcoin is the whole ecosystem is running by itself. 
 
-Blochain is considered to be secured because of its mechanism.
+Blockchain is considered to be secured because of its mechanism.
 
 Here is the link to the original bitcoin paper.
 https://bitcoin.org/bitcoin.pdf
@@ -45,7 +45,7 @@ In the window explorer under the project folder, click File> Open Command Line o
 
 ## Adding a new node
 
-1. Check instruction in powerpoint.
+1. Check instruction in Thesis.pdf.
 
 ## Reqired package link
 
