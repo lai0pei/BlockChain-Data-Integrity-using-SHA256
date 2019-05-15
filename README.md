@@ -12,10 +12,15 @@ https://bitcoin.org/bitcoin.pdf
 # Project features
 
 1.It illustrates blocks of data connecting each other and form a blockchain. 
+
 2.New hashes are generated along with the user data and stored in a block.
+
 3.The project contains a simple distributed ledger to store the block and user information.
+
 4.Each block contain the generated metadata which are made to be altered.
+
 5.Each block contain a proof-of-work mechanism which generates new hash.
+
 6.Multiple devices can be connected each other and form a blockchain network.
 
 # Usage
