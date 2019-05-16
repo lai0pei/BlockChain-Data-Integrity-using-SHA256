@@ -36,11 +36,11 @@ The system is preferred running on window os.
 
 ## After Installing...
 
-In the window explorer under the project folder, click File> Open Command Line or Open Power Shell (Both as adminstrateor)
+In the window explorer under the project folder, click File> Open Command Line or Open Power Shell (Both as administrator)
 
 ## Under the project directory, In Command Line or Power Shell
 
-1. Type : npm install (Necessary packages will be installed aumatically)
+1. Type : npm install (Necessary packages will be installed automatically)
 2. Type : npm start (The system will be running up in the background)
 
 ## Open the browser
@@ -50,7 +50,7 @@ In the window explorer under the project folder, click File> Open Command Line o
 
 ## Adding a new node
 
-1. Check instruction in Thesis.pdf.
+1. Check instructions in Thesis.pdf.
 
 ## Reqired package link
 
